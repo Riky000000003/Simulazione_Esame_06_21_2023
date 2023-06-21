@@ -25,9 +25,9 @@ public class StoreCar
         System.out.println(cars);
     }
 
-    public Car moreExpensive()
+    public Car  moreExpensive()
     {
-        Car c2;
+        Car c2 = null;
         String moreExP="";
         double min=0;
         int i=0;
@@ -56,7 +56,7 @@ public class StoreCar
             }
         }
 
-        return c2 = null;
+        return c2;
     }
 
     public List carSort()
@@ -76,6 +76,20 @@ public class StoreCar
     {
         Gson gson = new Gson();
         String jsonS = gson.toJson(cars);
+        return jsonS;
+    }
+
+    public String getListAsJSON(List <Car> cars)
+    {
+        Gson gson = new Gson();
+        String jsonS = gson.toJson(cars);
+        return jsonS;
+    }
+
+    public String getListAsJSON(Car c)
+    {
+        Gson gson = new Gson();
+        String jsonS = gson.toJson(c);
         return jsonS;
     }
 }

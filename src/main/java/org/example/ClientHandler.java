@@ -84,11 +84,11 @@ public class ClientHandler implements Runnable{
         }
         else if(s.equals("all_sorted"))
         {
-            return (new ListCarsAnswer(store.carSort())).asJSON();
+            return store.getListAsJSON(store.carSort());
         }
         else if(s.equals("more_expensive"))
         {
-            return new ListCarsAnswer(store.moreExpensive()).asJSON();
+            return store.getListAsJSON(store.moreExpensive());
         }
 
         return "Error command not recognized";

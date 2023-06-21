@@ -22,26 +22,25 @@ public class StoreCar
         cars.add(new Car("bmw",3594.9, "123", 2));
         cars.add(new Car("audi",38346.9, "3634", 1));
         cars.add(new Car("ferrari" ,130000.4,"135", 10));
-        System.out.println(cars);
     }
 
     public Car  moreExpensive()
     {
         Car c2 = null;
         String moreExP="";
-        double min=0;
+        double max=0;
         int i=0;
 
         for (Car c: cars
              ) {
             if(i==0)
             {
-                min = c.getCost();
+                max = c.getCost();
                 moreExP = c.getTarga();
             }
-            if(c.getCost()<min)
+            if(c.getCost()>max)
             {
-                min = c.getCost();
+                max = c.getCost();
                 moreExP = c.getTarga();
             }
             i++;

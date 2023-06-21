@@ -27,7 +27,7 @@ public class Car
         return cost;
     }
 
-    public void setCountKm(double cost) {
+    public void setCost(double cost) {
         this.cost= cost;
     }
 
